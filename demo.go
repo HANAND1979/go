@@ -73,15 +73,15 @@ func func_if(p, q int) bool {
 }
 
 func func_case() {
-	fmt.Print("When is Saturday?")
+	fmt.Print("When is Monday?")
 	today := time.Now().Weekday()
-	switch time.Saturday {
+	switch time.Monday {
 	case today + 0:
 		fmt.Println("Today")
 	case today + 1:
-		fmt.Println("One day away")
+		fmt.Println("Tomorrow")
 	case today + 2:
-		fmt.Println("Two days away")
+		fmt.Println("Day after tomorrow")
 	default:
 		fmt.Println("Too far away")
 
