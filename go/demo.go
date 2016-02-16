@@ -43,7 +43,12 @@ func main() {
 
 	//Demo of MD5 hash
 	//func_hashmd5("Wow!Password")
+	
+	//Demo of types and methods
+	fr:=Mynumber(7)
+	fmt.Println("The square of my number is",fr.func_square())
 }
+
 
 //demo of function
 func func_demo(s string) (string, int) {
@@ -73,9 +78,9 @@ func func_if(p, q int) bool {
 }
 
 func func_case() {
-	fmt.Print("When is Saturday?")
+	fmt.Print("When is Moday?")
 	today := time.Now().Weekday()
-	switch time.Saturday {
+	switch time.Monday {
 	case today + 0:
 		fmt.Println("Today")
 	case today + 1:
@@ -87,6 +92,14 @@ func func_case() {
 
 	}
 }
+
+//example of type and methods 
+
+type Mynumber int
+func (n Mynumber) func_square() Mynumber{
+	return (n*n)
+}
+
 
 //This function demonstrates the usage of crypto function for MD5 hash
 //func func_hashmd5(password string) string {
