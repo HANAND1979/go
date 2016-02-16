@@ -43,7 +43,16 @@ func main() {
 
 	//Demo of MD5 hash
 	//func_hashmd5("Wow!Password")
+	
+	//Demo of types and methods
+	fr:=Mynumber(7)
+	fmt.Println("The square of my number is",fr.func_square())
+	
+	post:=My_blog{"A Go blog","Welcome to my blog on Go","16-Feb-2016"}
+	fmt.Println(My_blog.func_postblog(post))
+
 }
+
 
 //demo of function
 func func_demo(s string) (string, int) {
@@ -73,9 +82,9 @@ func func_if(p, q int) bool {
 }
 
 func func_case() {
-	fmt.Print("When is Saturday?")
+	fmt.Print("When is Moday?")
 	today := time.Now().Weekday()
-	switch time.Saturday {
+	switch time.Monday {
 	case today + 0:
 		fmt.Println("Today")
 	case today + 1:
@@ -87,6 +96,28 @@ func func_case() {
 
 	}
 }
+
+//simple example of type and methods 
+type Mynumber int
+func (n Mynumber) func_square() Mynumber{
+	return (n*n)
+}
+
+//more complex example of type and methods
+type My_blog struct{
+	title 	string
+	post 	string
+	posted_on string
+}
+
+func (blog My_blog) func_postblog() string{
+	blog_stream:="<xml><title>"+blog.title+"</title><post>"+blog.post+"</post><time>"+blog.posted_on+"</time></xml>"
+	return blog_stream
+}
+
+ 
+
+
 
 //This function demonstrates the usage of crypto function for MD5 hash
 //func func_hashmd5(password string) string {
