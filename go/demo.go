@@ -3,12 +3,13 @@ package main
 
 //importing packages
 import (
-	//"crypto/md5"
+	
 	"fmt"
-	//"io"
 	"math"
 	"math/rand"
 	"time"
+	//"crypto/md5"
+	//"io"	
 )
 
 var hello string
@@ -19,10 +20,20 @@ func main() {
 	fmt.Println("Hello Git World!")
 	hello = "Hello World!"
 	fmt.Println(hello)
-
+	
+	//constant declaration
+	const Pi,radius = 3.14159,2
+	fmt.Println(Pi*math.Sqrt(radius)) 
+	
+	//complex maths
+	var loc1,loc2 complex128
+	loc1 = 5+7i
+	loc2 = 7+5i
+	fmt.Println(loc1*loc2)
+	
 	a, b := 8.1, 9.7 //short variable declaration
 	fmt.Println(a * b)
-	fmt.Println(math.Pi)
+	fmt.Println(math.Pi) //notice that Pi is different from the constant Pi declared above
 	fmt.Println(rand.Intn(7))
 
 	//type conversions
