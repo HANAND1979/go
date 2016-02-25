@@ -38,8 +38,8 @@ func main() {
 
 	//type conversions
 	var x, y int = 7, 9
-	var f float64 = math.Sqrt(float64(x*x + y*y))
-	var z uint = uint(f)
+	var f float64 = math.Sqrt(float64(x*x + y*y)) //conversion to float64
+	var z uint = uint(f) //conversion to uint
 	fmt.Println("Type conversion", x, y, f, z)
 
 	//Demo of function
@@ -47,20 +47,20 @@ func main() {
 	fmt.Println(m, n)
 
 	//Demo of control statements
-	defer func_for(3) //illustration of defer
+	defer func_for(70) //illustration of defer
 	if_output := func_if(9, 9)
 	fmt.Println(if_output)
 	func_case()
 
-	//Demo of MD5 hash
-	//func_hashmd5("Wow!Password")
-	
 	//Demo of types and methods
 	fr:=Mynumber(7)
 	fmt.Println("The square of my number is",fr.func_square())
 	
 	post:=My_blog{"A Go blog","Welcome to my blog on Go","16-Feb-2016"}
  	fmt.Println(My_blog.func_postblog(post))
+	
+	//Demo of MD5 hash
+	//func_hashmd5("Wow!Password")
 }
 
 
