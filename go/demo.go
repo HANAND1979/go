@@ -13,7 +13,6 @@ import (
 )
 
 var hello string
-var gdp int
 
 //Basic arithmetic functions
 func main() {
@@ -47,7 +46,7 @@ func main() {
 	fmt.Println(m, n)
 
 	//Demo of control statements
-	defer func_for(70) //illustration of defer
+	defer func_for(3) //illustration of defer
 	if_output := func_if(9, 9)
 	fmt.Println(if_output)
 	func_case()
@@ -59,8 +58,6 @@ func main() {
 	post:=My_blog{"A Go blog","Welcome to my blog on Go","16-Feb-2016"}
  	fmt.Println(My_blog.func_postblog(post))
 	
-	//Demo of MD5 hash
-	//func_hashmd5("Wow!Password")
 }
 
 
@@ -92,7 +89,7 @@ func func_if(p, q int) bool {
 }
 
 func func_case() {
-	fmt.Print("When is Moday?")
+	fmt.Print("When is Monday?")
 	today := time.Now().Weekday()
 	switch time.Monday {
 	case today + 0:
@@ -125,10 +122,7 @@ func (n Mynumber) func_square() Mynumber{
  	blog_stream:="<xml><title>"+blog.title+"</title><post>"+blog.post+"</post><time>"+blog.posted_on+"</time></xml>"
  	return blog_stream
  }
-//This function demonstrates the usage of crypto function for MD5 hash
-//func func_hashmd5(password string) string {
 
-//	p := md5.New()
-//	return io.WriteString(p, password)
 
-//}
+
+
