@@ -48,4 +48,16 @@ func main() {
 	fmt.Println(s[2:5],s[2:],s[:9])
 	fmt.Println("copied slice:",t)
 	
+	//illustration of maps [key-value pairs]
+	scrip:= make(map[string]float32)
+	scrip["nifty"]=7000
+	scrip["sensex"]=22000
+	scrip["ITC"]=230
+	fmt.Println(scrip)
+	delete(scrip,"nifty")
+	fmt.Println(scrip,len(scrip))
+	_, is_present := scrip["nifty"] 
+    	fmt.Println("is nifty present?:", is_present)
+	
+	
 }
