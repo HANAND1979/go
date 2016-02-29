@@ -41,3 +41,5 @@ func main() {
     defer measure(r) //notice how the results vary based on which parameter is passed
     measure(c)
 }
+//source: https://gobyexample.com/interfaces
+//additional reading: http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go
