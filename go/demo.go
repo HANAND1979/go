@@ -69,11 +69,16 @@ func func_demo(s string) (string, int) {
 	return a, b
 }
 
-func func_for(counter int) {
+func func_for(counter int) error {
 	sum := 0
-	for i := 0; i < counter; i++ {
-		sum += i
-		defer print(sum, "\n") //use of defer inverts the output
+	if counter < 0 {
+		return errors.New("Sorry, cannot loop with negative numbers")
+	} else {
+		for i := 0; i < counter; i++ {
+			sum += i
+			defer fmt.Println(sum, "\n") //use of defer inverts the output
+		}
+		return nil
 	}
 
 }
