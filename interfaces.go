@@ -38,6 +38,6 @@ func main() {
     r := rect{width: 3, height: 4}
     c := circle{radius: 5}
 //The circle and rect struct types both implement the geometry interface so we can use instances of these structs as arguments to measure.
-    measure(r)
+    defer measure(r) //notice how the results vary based on which parameter is passed
     measure(c)
 }
