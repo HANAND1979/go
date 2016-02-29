@@ -43,3 +43,50 @@ func main() {
 }
 //source: https://gobyexample.com/interfaces
 //additional reading: http://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go
+
+package main
+
+import (
+	"fmt"
+)
+
+type sq_root interface {
+	root() float64
+	speak() string
+}
+
+type real_number struct {
+	real float64
+}
+
+type int_num struct {
+	q int
+}
+
+func (r real_number) root() float64 {
+	y := r.real * r.real
+	return y
+}
+func (r real_number) speak() string {
+	return "You sent me a real number"
+}
+
+func (intr int_num) root() float64{
+	//y:="I don't work with integers !"
+	y := float64(intr.q / 7)
+	return y
+}
+func (intr int_num) speak() string {
+	return "You sent me an integer"
+}
+
+func find_root(r sq_root) {
+	fmt.Println(r.root())
+	fmt.Println(r.speak())
+}
+func main() {
+	a := real_number{real: 3.7}
+	b := int_num{q: 999}
+	find_root(a)
+	find_root(b)
+}
