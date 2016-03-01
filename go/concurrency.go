@@ -6,7 +6,7 @@ import (
 )
 
 func f(word string) {
-	fmt.Println("//I am going first")
+	fmt.Println("I am going first")
 	for i := 0; i < 3; i++ {
 		fmt.Println(word, i)
 	}
@@ -14,7 +14,7 @@ func f(word string) {
 }
 
 func g(word string, done chan bool) {
-	fmt.Println("//Go routine initiated")
+	fmt.Println("Go routine initiated")
 	for i := 0; i < 3; i++ {
 		fmt.Println(word, i)
 	}
@@ -33,10 +33,10 @@ func main() { //the function main() itself is an implicit goroutine
 
 	go func(msg string) { //implicit go routine declaration
 		fmt.Println(msg)
-		messages <- "//I am finished"
-	}("//I am yet another go routine")
+		messages <- "I am finished"
+	}("I am yet another go routine")
 
-	fmt.Println("//I am running from the main")
+	fmt.Println("I am running from the main")
 	for j := 0; j < 3; j++ {
 		fmt.Println(time.Now().Month(),j)
 	}
